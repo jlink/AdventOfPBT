@@ -1,2 +1,5 @@
 # AdventOfPBT
-Advent of PBT 2021 by https://twitter.com/ndubien. Implementations using jqwik.
+
+Tackling some of the challenges in [Advent of PBT 2021](https://dev.to/dubzzz/advent-of-pbt-2021-13ee)
+
+Implementations using jqwik and Kotlin.

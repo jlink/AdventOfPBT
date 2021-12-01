@@ -1,0 +1,31 @@
+# Jqwik
+.jqwik-*
+
+# Gradle
+.gradle
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Maven
+target/
+maven-status/
+
+# Eclipse
+.classpath
+.settings/
+.project
+bin/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+*.uml
+.shelf
+.idea/
+out/
+
+# Mac
+.DS_Store
