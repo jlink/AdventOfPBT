@@ -67,6 +67,8 @@ class DecomposeIntoPrimesProperties {
 
 }
 
+// The implementation is not very Kotlinish.
+// I stole it from a Java implementation I did in https://blog.johanneslink.net/2019/05/11/property-based-driven-development/
 fun decomposeIntoPrimes(number: Int): List<Int> {
     var rest = number
     val factors = mutableListOf<Int>()
