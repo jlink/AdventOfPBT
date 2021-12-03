@@ -12,8 +12,8 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
 
-    testImplementation("net.jqwik:jqwik:1.6.0")
-    testImplementation("net.jqwik:jqwik-kotlin:1.6.0")
+    testImplementation("net.jqwik:jqwik:1.6.1")
+    testImplementation("net.jqwik:jqwik-kotlin:1.6.1")
     testImplementation("org.assertj:assertj-core:3.21.0")
 }
 
