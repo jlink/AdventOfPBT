@@ -9,6 +9,6 @@ Implementations using jqwik and Kotlin.
 
 - Day 2: [Subject: decomposeIntoPrimes](https://dev.to/dubzzz/advent-of-pbt-2021-day-2-4gmg)
   and [my solution](./src/test/kotlin/adventOfPBT/day2)
-- 
+
 - Day 3: [Subject: fizzbuzz](https://dev.to/dubzzz/advent-of-pbt-2021-day-3-4mac)
   and [my solution](./src/test/kotlin/adventOfPBT/day3)
