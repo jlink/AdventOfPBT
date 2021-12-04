@@ -12,3 +12,6 @@ Implementations using jqwik and Kotlin.
 
 - Day 3: [Subject: fizzbuzz](https://dev.to/dubzzz/advent-of-pbt-2021-day-3-4mac)
   and [my solution](./src/test/kotlin/adventOfPBT/day3)
+
+- Day 4: [Subject: detectCycleInLinkedList](https://dev.to/dubzzz/advent-of-pbt-2021-day-4-3m6g)
+  and [my solution](./src/test/kotlin/adventOfPBT/day4)
