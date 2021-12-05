@@ -12,11 +12,15 @@ import net.jqwik.kotlin.api.ofSize
 @Domain(LinkedListDomain::class)
 class DetectCycleInLinkedListProperties {
 
-    @Property(tries = 10)
+    @Property
     fun noCycleDetectedInListsWithoutCycles(@ForAll @Cycles(NO) list: LinkedList) =
         detectCycleInLinkedList(list) == false
 
-    @Property(tries = 10)
+    /**
+     * If you make this property fail, then strange things will happen due to a Kotlin bug:
+     * https://youtrack.jetbrains.com/issue/KT-50063
+     */
+    @Property
     fun cycleDetectedInListsWithCycles(@ForAll @Cycles(YES) list: LinkedList) =
         detectCycleInLinkedList(list) == true
 }
@@ -58,7 +62,7 @@ class LinkedListDomain : DomainContextBase() {
             }
             current!!
         }
-        // Recursion is involved:
+        // Recursion is involved and shrinks much worse:
         // val sizes = Int.any(1..1000)
         // return sizes.flatMap { size ->
         //     Arbitraries.recursive(
