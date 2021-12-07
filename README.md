@@ -15,3 +15,6 @@ Implementations using jqwik and Kotlin.
 
 - Day 4: [Subject: detectCycleInLinkedList](https://dev.to/dubzzz/advent-of-pbt-2021-day-4-3m6g)
   and [my solution](./src/test/kotlin/adventOfPBT/day4)
+
+- Day 6: [Subject: simplifyFraction](https://dev.to/dubzzz/advent-of-pbt-2021-day-6-4lpo)
+  and [my solution](./src/test/kotlin/adventOfPBT/day6)
