@@ -18,3 +18,6 @@ Implementations using jqwik and Kotlin.
 
 - Day 6: [Subject: simplifyFraction](https://dev.to/dubzzz/advent-of-pbt-2021-day-6-4lpo)
   and [my solution](./src/test/kotlin/adventOfPBT/day6)
+- 
+- Day 7: [Subject: fibonacci](https://dev.to/dubzzz/advent-of-pbt-2021-day-6-4lpo)
+  and [my solution](./src/test/kotlin/adventOfPBT/day7)
