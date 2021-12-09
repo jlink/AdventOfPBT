@@ -8,9 +8,16 @@ class SortedProperties {
 
     // Using a generic type constraint instead of a concrete sortable / comparable type like Int.
     // This makes the property arguably more generic.
-    // In practice jqwik will generate lists of numbers, strings, dates etc.
+    // In practice jqwik will generate arrays of numbers, strings, dates etc.
     @Property
-    fun <T : Comparable<T>> anyArrayCanBeSorted(@ForAll array: Array<T>) {
+    fun <T : Comparable<T>> `sorted array has exact same elements`(@ForAll array: Array<T>) {
+        val sorted = sorted(array)
+        assertThat(sorted).hasSameSizeAs(array)
+        assertThat(sorted).hasSameElementsAs(array.asList())
+    }
+
+    @Property
+    fun <T : Comparable<T>> `any array can be sorted`(@ForAll array: Array<T>) {
         val sorted = sorted(array)
         assertThat(isSorted(sorted)).isTrue
     }
