@@ -27,7 +27,7 @@ class SortedProperties {
 }
 
 fun <T : Comparable<T>> sorted(array: Array<T>): Array<T> {
-    val clone: Array<T> = array.clone()
-    clone.sort()
-    return clone
+    val copy: Array<T> = array.copyOf()
+    copy.sort()
+    return copy
 }
