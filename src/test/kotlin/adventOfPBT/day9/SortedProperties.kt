@@ -2,7 +2,6 @@ package adventOfPBT.day9
 
 import net.jqwik.api.ForAll
 import net.jqwik.api.Property
-import net.jqwik.api.constraints.WithNull
 import org.assertj.core.api.Assertions.assertThat
 
 class SortedProperties {
