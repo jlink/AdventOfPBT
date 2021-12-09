@@ -21,3 +21,7 @@ Implementations using jqwik and Kotlin.
 
 - Day 7: [Subject: fibonacci](https://dev.to/dubzzz/advent-of-pbt-2021-day-6-4lpo)
   and [my solution](./src/test/kotlin/adventOfPBT/day7)
+
+- Day 9: [Subject: sorted](https://dev.to/dubzzz/advent-of-pbt-2021-day-9-55na)
+  and [my solution](./src/test/kotlin/adventOfPBT/day9)
+
