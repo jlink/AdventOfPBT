@@ -25,3 +25,6 @@ Implementations using jqwik and Kotlin.
 - Day 9: [Subject: sorted](https://dev.to/dubzzz/advent-of-pbt-2021-day-9-55na)
   and [my solution](./src/test/kotlin/adventOfPBT/day9)
 
+- Day 12: [Subject: validParentheses](https://dev.to/dubzzz/advent-of-pbt-2021-day-12-351b)
+  and [my solution](./src/test/kotlin/adventOfPBT/day12)
+
