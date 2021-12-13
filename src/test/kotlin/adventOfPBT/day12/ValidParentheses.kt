@@ -1,4 +1,4 @@
-package adventOfPBT.days12
+package adventOfPBT.day12
 
 /**
  * Given a string containing just the characters '(', ')', '{',

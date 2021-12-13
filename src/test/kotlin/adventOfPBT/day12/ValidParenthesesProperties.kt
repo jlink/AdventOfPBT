@@ -1,4 +1,4 @@
-package adventOfPBT.days12
+package adventOfPBT.day12
 
 import net.jqwik.api.*
 import net.jqwik.api.Arbitraries.*
