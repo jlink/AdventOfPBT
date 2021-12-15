@@ -13,6 +13,8 @@ data class LinkedList(val value: Int, var next: LinkedList? = null) {
         return current
     }
 
+    // TODO: Override equals and hashcode because default implementation cannot deal with recursive types
+
     override fun toString(): String {
         return "LinkedList(value=`$value`,hasNext=`${next != null}`)"
     }
