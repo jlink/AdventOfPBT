@@ -1,8 +1,6 @@
 package adventOfPBT.day16
 
-import net.jqwik.api.Assume
-import net.jqwik.api.ForAll
-import net.jqwik.api.Property
+import net.jqwik.api.*
 import org.assertj.core.api.Assertions.assertThat
 
 /**
@@ -43,8 +41,45 @@ class ReversedProperties {
         return reversed(reversed(original)) == original
     }
 
+    /**
+     * Metamorphic properties do not make assumptions about single execution of function under test,
+     * but about the change of the result, when the input is also changed.
+     */
+    @Group
+    inner class `Metamorphic Properties` {
+
+        @Property
+        fun `adding element to list`(
+            @ForAll original: List<Int>,
+            @ForAll element: Int
+        ) {
+            val originalReversed = reversed(original)
+            val appendedList = original + element
+            val appendedListReversed = reversed(appendedList)
+
+            assertThat(appendedListReversed).isEqualTo(listOf(element) + originalReversed)
+        }
+
+        @Property
+        fun `reversing two lists`(
+            @ForAll l1: List<Int>,
+            @ForAll l2: List<Int>
+        ) {
+            val l1Reversed = reversed(l1)
+            val l2Reversed = reversed(l2)
+
+            val l1PlusL2 = l1 + l2
+            val l1PlusL2Reversed = reversed(l1PlusL2)
+
+            assertThat(l1PlusL2Reversed).isEqualTo(l2Reversed + l1Reversed)
+        }
+
+
+    }
 }
 
 fun <T> reversed(data: List<T>): List<T> {
+    // Enable the following line to see which properties will detect the broken implementation:
+    // if (data.size > 4) return data
     return data.asReversed()
 }
