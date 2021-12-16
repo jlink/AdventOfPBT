@@ -28,3 +28,6 @@ Implementations using jqwik and Kotlin.
 - Day 12: [Subject: validParentheses](https://dev.to/dubzzz/advent-of-pbt-2021-day-12-351b)
   and [my solution](./src/test/kotlin/adventOfPBT/day12)
 
+- Day 16: [Subject: reversed](https://dev.to/dubzzz/advent-of-pbt-2021-day-16-2hma)
+  and [my solution](./src/test/kotlin/adventOfPBT/day16)
+
