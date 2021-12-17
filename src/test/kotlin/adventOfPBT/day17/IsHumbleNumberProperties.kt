@@ -47,5 +47,15 @@ class IsHumbleNumberProperties {
     @Provide
     private fun nonHumbleFactors() = primes().filter { it > 7 }.list().ofMaxSize(100)
 
-    private fun primes() = Arbitraries.of(2L, 3L, 5L, 7L, 11L, 13L, 101L)
+    // There could be as many primes in the list as you want.
+    @Provide
+    private fun primes() = Arbitraries.of(2L, 3L, 5L, 7L, 11L, 13L, 17L, 19L, 101L)
+
+    @Property
+    fun validatePrimesGenerator(@ForAll("primes") prime: Long) {
+        for(divisor in 2L until prime) {
+            assert(prime % divisor != 0L, {"$prime has divisor $divisor"})
+        }
+    }
+
 }
