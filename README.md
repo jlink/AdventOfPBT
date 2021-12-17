@@ -31,3 +31,6 @@ Implementations using jqwik and Kotlin.
 - Day 16: [Subject: reversed](https://dev.to/dubzzz/advent-of-pbt-2021-day-16-2hma)
   and [my solution](./src/test/kotlin/adventOfPBT/day16)
 
+- Day 17: [Subject: isHumbleNumber](https://dev.to/dubzzz/advent-of-pbt-2021-day-17-3p8b)
+  and [my solution](./src/test/kotlin/adventOfPBT/day17)
+
