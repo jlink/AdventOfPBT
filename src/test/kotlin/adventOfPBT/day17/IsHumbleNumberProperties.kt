@@ -54,7 +54,7 @@ class IsHumbleNumberProperties {
     @Property
     fun validatePrimesGenerator(@ForAll("primes") prime: Long) {
         for(divisor in 2L until prime) {
-            assert(prime % divisor != 0L, {"$prime has divisor $divisor"})
+            assert(prime % divisor != 0L) { "$prime has divisor $divisor" }
         }
     }
 
