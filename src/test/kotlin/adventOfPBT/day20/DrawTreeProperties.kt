@@ -15,9 +15,9 @@ class DrawTreeProperties {
     }
 
     @Property
-    fun `top and bottom of tree`(@ForAll @JqwikIntRange(min = 1, max = 20) treeSize: Int) {
+    fun `trunk is at bottom`(@ForAll @JqwikIntRange(min = 1, max = 20) treeSize: Int) {
         val tree = drawTree(treeSize).lines()
-        assertThat(tree.first().trim()).isEqualTo("^")
+        assertThat(tree[treeSize + 1].trim()).isEqualTo("^")
         assertThat(tree.last().trim()).isEqualTo("^")
     }
 
@@ -60,7 +60,7 @@ class DrawTreeProperties {
         }
     }
 
-    private fun treeWithoutTopAndBottom(treeSize: Int) = drawTree(treeSize).lines().subList(1, treeSize + 1)
+    private fun treeWithoutTopAndBottom(treeSize: Int) = drawTree(treeSize).lines().subList(0, treeSize)
 
     private fun String.isSymmetric(): Boolean {
         if (length <= 1) {

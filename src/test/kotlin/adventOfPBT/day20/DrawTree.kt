@@ -13,8 +13,12 @@ fun drawTree(size: Int) = drawTreeLines(size).joinToString("\n")
 private const val TRUNK = "^"
 
 private fun drawTreeLines(size: Int): List<String> {
-    return listOf(pad(size, 1, TRUNK)) + innerTree(size) + pad(size, 1, TRUNK)
+    return innerTree(size) + trunk(size)
 }
+
+private fun trunk(size: Int): List<String> = listOf(
+    pad(size, 1, TRUNK), pad(size, 1, TRUNK)
+)
 
 private fun innerTree(size: Int): List<String> {
     val inner = mutableListOf<String>()
