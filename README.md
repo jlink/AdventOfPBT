@@ -34,3 +34,6 @@ Implementations using jqwik and Kotlin.
 - Day 17: [Subject: isHumbleNumber](https://dev.to/dubzzz/advent-of-pbt-2021-day-17-3p8b)
   and [my solution](./src/test/kotlin/adventOfPBT/day17)
 
+- Day 20: [Subject: drawTree](https://dev.to/dubzzz/advent-of-pbt-2021-day-20-31a3)
+  and [my solution](./src/test/kotlin/adventOfPBT/day20)
+
