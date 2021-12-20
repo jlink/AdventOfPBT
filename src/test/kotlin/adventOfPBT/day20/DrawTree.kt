@@ -13,10 +13,10 @@ fun drawTree(size: Int) = drawTreeLines(size).joinToString("\n")
 private const val TRUNK = "^"
 
 private fun drawTreeLines(size: Int): List<String> {
-    return innerTree(size) + trunk(size)
+    return innerTree(size) + stem(size)
 }
 
-private fun trunk(size: Int): List<String> = listOf(
+private fun stem(size: Int): List<String> = listOf(
     pad(size, 1, TRUNK), pad(size, 1, TRUNK)
 )
 
@@ -34,8 +34,6 @@ private fun innerTree(size: Int): List<String> {
 }
 
 private fun pad(size: Int, index: Int, line: String): String {
-    var line1 = line
-    val space = " ".repeat(size - index)
-    line1 = space + line1 + space
-    return line1
+    val padding = " ".repeat(size - index)
+    return padding + line + padding
 }

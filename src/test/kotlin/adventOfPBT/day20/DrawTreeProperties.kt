@@ -15,14 +15,14 @@ class DrawTreeProperties {
     }
 
     @Property
-    fun `trunk is at bottom`(@ForAll @JqwikIntRange(min = 1, max = 20) treeSize: Int) {
+    fun `stem is at bottom`(@ForAll @JqwikIntRange(min = 1, max = 20) treeSize: Int) {
         val tree = drawTree(treeSize).lines()
         assertThat(tree[treeSize + 1].trim()).isEqualTo("^")
         assertThat(tree.last().trim()).isEqualTo("^")
     }
 
     @Property
-    fun `height of tree`(@ForAll @JqwikIntRange(min = 1, max = 20) treeSize: Int) {
+    fun `height of tree is tree size + 2`(@ForAll @JqwikIntRange(min = 1, max = 20) treeSize: Int) {
         assertThat(drawTree(treeSize).lines()).hasSize(treeSize + 2)
     }
 
