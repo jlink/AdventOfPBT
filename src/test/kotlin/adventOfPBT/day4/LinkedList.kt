@@ -2,12 +2,13 @@ package adventOfPBT.day4
 
 data class LinkedList(val value: Int, var next: LinkedList? = null) {
     fun last(): LinkedList {
-        val visited = mutableListOf(this)
+        val visited = mutableSetOf(this)
         var current = this
         while(current.next != null) {
             if (current.next in visited) {
                 return current
             }
+            visited.add(current)
             current = current.next!!
         }
         return current
